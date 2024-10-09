@@ -5,7 +5,7 @@ from ocf_convLSTM.model import load_model
 class ConvLSTM(AbstractModel):
     """ConvLSTM model class"""
 
-    def __init__(self, history_steps: int, example_parameter: int) -> None:
+    def __init__(self, history_steps: int) -> None:
         # All models must include `history_steps` as a parameter. This is the number of previous
         # frames that the model uses to makes its predictions. This should not be more than 25, i.e.
         # 6 hours (inclusive of end points) of 15 minutely data.
