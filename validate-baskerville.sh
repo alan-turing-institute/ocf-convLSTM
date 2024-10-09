@@ -6,8 +6,8 @@
 #SBATCH --tasks-per-node 1
 #SBATCH --gpus 1
 #SBATCH --cpus-per-gpu 36
-#SBATCH --time 45:00:00
-#SBATCH --job-name ConvLSTM-validation
+#SBATCH --time 01:00:00
+#SBATCH --job-name ConvLSTM-validation_50_batchlimit
 
 # drop into baskerville
 module purge
@@ -17,7 +17,7 @@ module load Python/3.11.3-GCCcore-12.3.0
 cd /bask/projects/v/vjgo8416-climate/shared/cloudcasting-validation
 
 # set wandb credentials
-export WANDB_API_KEY=your_wandb_api_key
+export WANDB_API_KEY=48ca1d1b17503757e000a50299cb77d5cc548a9a
 
 # check if repo exists
 if [ ! -d "ocf-convLSTM" ]; then
