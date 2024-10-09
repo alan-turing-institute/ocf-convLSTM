@@ -64,6 +64,6 @@ class ConvLSTM(nn.Module):
 
         return x
 
-def load_model(path='conv-lstm1.pt'):
+def load_model(path='/bask/projects/v/vjgo8416-climate/shared/cloudcasting-validation/ocf-convLSTM/src/ocf_convLSTM/conv-lstm1.pt'):
     model = torch.load(path)
     return model
