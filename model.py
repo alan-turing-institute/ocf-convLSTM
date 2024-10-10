@@ -1,5 +1,5 @@
 from cloudcasting.models import AbstractModel
-from ocf_convLSTM.model import load_model
+from ocf_convLSTM.first_model import load_model, FirstModel
 import numpy as np
 
 # We define a new class that inherits from AbstractModel
