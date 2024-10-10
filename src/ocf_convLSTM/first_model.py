@@ -1,10 +1,10 @@
 import torch
 from torch import nn
 
-class ConvLSTM(nn.Module):
+class FirstModel(nn.Module):
 
     def __init__(self):
-        super(ConvLSTM, self).__init__()
+        super(FirstModel, self).__init__()
 
         self.conv1 = nn.Conv3d(11, 32, (1, 3, 3), padding=(0, 1, 1))
         self.relu1 = nn.ReLU()
@@ -64,6 +64,6 @@ class ConvLSTM(nn.Module):
 
         return x
 
-def load_model(path='/bask/projects/v/vjgo8416-climate/shared/cloudcasting-validation/ocf-convLSTM/src/ocf_convLSTM/conv-lstm2.pt'):
+def load_model(path='/bask/projects/v/vjgo8416-climate/shared/cloudcasting-validation/ocf-convLSTM/src/ocf_convLSTM/conv-lstm1.pt'):
     model = torch.load(path)
     return model
