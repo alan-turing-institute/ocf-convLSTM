@@ -1,10 +1,10 @@
 import torch
 from torch import nn
 
-class FirstModel(nn.Module):
+class ConvLSTM(nn.Module):
 
     def __init__(self):
-        super(FirstModel, self).__init__()
+        super(ConvLSTM, self).__init__()
 
         self.conv1 = nn.Conv3d(11, 32, (1, 3, 3), padding=(0, 1, 1))
         self.relu1 = nn.ReLU()
