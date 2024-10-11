@@ -1,5 +1,5 @@
 from cloudcasting.models import AbstractModel
-from ocf_convLSTM.first_model import load_model, FirstModel
+from ocf_convLSTM.first_model import FirstModel
 import numpy as np
 import torch
 
@@ -7,7 +7,7 @@ import torch
 class ConvLSTM(AbstractModel):
     """ConvLSTM model class"""
 
-    def __init__(self, history_steps: int) -> None:
+    def __init__(self, history_steps: int, state_dict_path: str) -> None:
         # All models must include `history_steps` as a parameter. This is the number of previous
         # frames that the model uses to makes its predictions. This should not be more than 25, i.e.
         # 6 hours (inclusive of end points) of 15 minutely data.
@@ -20,7 +20,8 @@ class ConvLSTM(AbstractModel):
         # Here you can add any other parameters that you need to initialize your model
         # You might load your trained ML model or set up an optical flow method here.
         # You can also access any code from src/ocf_convLSTM, e.g.
-        self.model = load_model()
+        self.model = FirstModel()
+        self.model.load_state_dict(torch.load(state_dict_path, weights_only=True))
         self.model.eval()
         ############################
 
