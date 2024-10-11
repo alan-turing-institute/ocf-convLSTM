@@ -1,6 +1,7 @@
 from cloudcasting.models import AbstractModel
 from ocf_convLSTM.first_model import load_model, FirstModel
 import numpy as np
+import torch
 
 # We define a new class that inherits from AbstractModel
 class ConvLSTM(AbstractModel):
