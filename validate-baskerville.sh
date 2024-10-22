@@ -6,8 +6,8 @@
 #SBATCH --tasks-per-node 1
 #SBATCH --gpus 1
 #SBATCH --cpus-per-gpu 36
-#SBATCH --time 01:00:00
-#SBATCH --job-name ConvLSTM-validation_50_batchlimit
+#SBATCH --time 45:00:00
+#SBATCH --job-name ConvLSTM-validation
 
 # drop into baskerville
 module purge
