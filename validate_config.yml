@@ -9,5 +9,5 @@ validation:
   wandb_run_name: "ConvLSTM-validation_50_batchlimit"
   nan_to_num: True
   batch_size: 16
-  num_workers: 36
+  num_workers: 0
   batch_limit: 50
